@@ -1,6 +1,6 @@
 {
   "name": "Maddins Warema Bridge",
-  "version": "0.0.5",
+  "version": "dev",
   "slug": "maddins-warema-bridge",
   "description": "Control your Warema WMS system",
   "arch": ["aarch64", "amd64", "armv7", "i386"],
