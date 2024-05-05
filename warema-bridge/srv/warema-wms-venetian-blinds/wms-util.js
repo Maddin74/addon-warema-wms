@@ -342,6 +342,9 @@ function decodeStickCmd(rcv) {
                     case '25':
                         params.deviceTypeStr = 'Radio motor      ';
                         break;
+                    case '28':
+                        params.deviceTypeStr = 'LED Stripes      ';
+                        break;
                     case '63':
                         params.deviceTypeStr = 'Web control      ';
                         break;
