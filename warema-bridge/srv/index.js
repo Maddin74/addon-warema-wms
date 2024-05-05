@@ -180,7 +180,25 @@ function registerDevice(element) {
                 position_topic: 'warema/' + element.snr + '/position',
                 set_position_topic: 'warema/' + element.snr + '/set_position',
             }
-
+            break;
+          case 28:
+            topic = 'homeassistant/light/' + element.snr + '/' + element.snr + '/config'
+            model = 'LED Stripes'
+            payload = {
+              ...base_payload,
+              device: {
+                ...base_device,
+                model: model
+              },
+              command_topic: 'warema/' + element.snr + '/switch',
+              brightness_state_topic: 'warema/' + element.snr + '/position',
+              brightness_command_topic: 'warema/' + element.snr + '/set_brightness',
+              on_command_type: 'brightness',
+              payload_off: 'off',
+              payload_on: 'on',
+              state_topic: 'warema/' + element.snr + '/state',
+              brightness_scale: '100',
+            }
             break;
         default:
             log.info('Unrecognized device type: ' + element.type)
